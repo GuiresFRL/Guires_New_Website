@@ -1,11 +1,13 @@
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME }],
   robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
-  icons: { icon: "/logo.svg" },
+  icons: { icon: [{ url: `${BASE}/icon.svg`, type: "image/svg+xml" }], apple: `${BASE}/icon.svg` },
   other: {
     "geo.region": "IN-TN",
     "geo.placename": "Chennai",
