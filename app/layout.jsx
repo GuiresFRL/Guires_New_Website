@@ -4,7 +4,7 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME }],
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
   icons: { icon: "/logo.svg" },
   other: {
     "geo.region": "IN-TN",
